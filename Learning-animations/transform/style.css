@@ -1,0 +1,61 @@
+body {
+  background-color: lightcoral;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  grid-auto-rows: minmax(50px, auto);
+}
+
+.container .column {
+  min-width: 100px;
+  border: 1px solid firebrick;
+  min-height: 100px;
+  display: grid;
+}
+.column span {
+  justify-self: center;
+  align-self: center;
+}
+
+.column .item1:hover {
+  transform: translateX(200px);
+}
+.column .item2:hover {
+  transform: translateY(200px);
+}
+.column .item3:hover {
+  transform: translate(-200px, 100px);
+}
+
+.column .item4:hover {
+  transform: scale(2);
+}
+.column .item5:hover {
+  transform: scaleX(3);
+}
+.column .item6:hover {
+  transform: scaleY(3);
+}
+.column .scaleXY:hover {
+  transform: scale(2, 3);
+}
+
+.column .rotateX:hover {
+  transform: rotateX(60deg);
+}
+.column .rotateY:hover {
+  transform: rotateY(60deg);
+}
+.column .rotateZ:hover {
+  transform: rotateZ(60deg);
+}
+.column .rotateXY:hover {
+  transform: rotate(60deg);
+}
+
+.column .rotateTranslateScale:hover {
+  transform: rotate(40deg) translate(70px, 100px) scale(3);
+}
