@@ -1,0 +1,47 @@
+body {
+  background-color: lightcoral;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  grid-auto-rows: minmax(50px, auto);
+}
+
+.container .column {
+  min-width: 100px;
+  border: 1px solid firebrick;
+  min-height: 100px;
+  display: grid;
+}
+.column span {
+  justify-self: center;
+  align-self: center;
+}
+
+.one {
+  transition: background-color 1s, rotate 1s linear;
+}
+
+.two {
+  transition: 2s ease-in;
+}
+.three {
+  transition: 2s ease-out;
+}
+.four {
+  transition: 2s ease-in-out;
+}
+
+.five {
+  transition: background-color 1s 2s, rotate 2s 1s ease-in-out;
+}
+.one:hover,
+.two:hover,
+.three:hover,
+.four:hover,
+.five:hover {
+  background-color: forestgreen;
+  rotate: 360deg;
+}
