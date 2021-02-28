@@ -110,6 +110,10 @@ body {
   animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
+.nineteen > * {
+  animation: move 5s ease-in 3s infinite reverse both;
+}
+
 @keyframes move {
   from {
     transform: translateX(-300px);
