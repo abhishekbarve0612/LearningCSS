@@ -1,0 +1,129 @@
+body {
+  background-color: lightcoral;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  grid-auto-rows: minmax(50px, auto);
+}
+
+.container .column {
+  min-width: 100px;
+  border: 1px solid firebrick;
+  min-height: 100px;
+  display: grid;
+}
+.column span {
+  justify-self: center;
+  align-self: center;
+}
+
+.move-image {
+  animation-name: move;
+  animation-duration: 3s;
+}
+
+.move-image:hover {
+  animation-name: move-down;
+  animation-duration: 2s;
+}
+
+.three span {
+  animation-name: move;
+  animation-duration: 1s;
+  animation-delay: 2s;
+  animation-fill-mode: backwards;
+}
+
+.five span {
+  animation-name: move;
+  animation-duration: 1s;
+  animation-delay: 2s;
+  animation-fill-mode: both;
+}
+
+.container > .column span {
+  animation-name: move;
+  animation-duration: 1s;
+}
+
+.six span {
+  animation-fill-mode: forwards;
+}
+
+.seven span {
+  animation-iteration-count: 3;
+}
+
+.eight span {
+  animation-iteration-count: infinite;
+}
+
+.nine span {
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+}
+.ten span {
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+}
+.eleven span {
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.twelve span {
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+
+.thirteen span,
+.fourteen span,
+.fifteen span,
+.sixteen span,
+.seventeen span,
+.eighteen span {
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+}
+
+.thirteen span {
+  animation-timing-function: ease;
+}
+.thirteen span {
+  animation-timing-function: ease;
+}
+.fourteen span {
+  animation-timing-function: linear;
+}
+.fifteen span {
+  animation-timing-function: ease-in;
+}
+.sixteen span {
+  animation-timing-function: ease-out;
+}
+.seventeen span {
+  animation-timing-function: ease-in-out;
+}
+.eighteen span {
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@keyframes move {
+  from {
+    transform: translateX(-300px);
+  }
+  to {
+    transform: translateX(1200px);
+  }
+}
+
+@keyframes move-down {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(300px);
+  }
+}
